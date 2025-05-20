@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Consular Assistance – Embassy{% endblock %}
+{% block content %}
+<h1 class="text-3xl font-bold mb-4">Consular Assistance</h1>
+<p class="mb-4">We offer help with emergencies, legal documents, notarization, and more.</p>
+<div class="bg-gray-100 p-4 rounded mb-4">
+  <h2 class="font-semibold">Emergency Contact</h2>
+  <p>+1‑555‑123‑4567 (24/7)</p>
+</div>
+<form action="#" method="post" class="space-y-4">
+  <div><label>Your Name:<input type="text" name="name" class="border p-2 w-full"></label></div>
+  <div><label>Email:<input type="email" name="email" class="border p-2 w-full"></label></div>
+  <div><label>Message:<textarea name="message" class="border p-2 w-full"></textarea></label></div>
+  <button type="submit" class="px-4 py-2 bg-red-600 text-white rounded">Send Request</button>
+</form>
+{% endblock %}

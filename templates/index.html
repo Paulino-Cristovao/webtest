@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Our Services" %} – Embassy{% endblock %}
+
+{% block content %}
+  <h1 class="text-3xl font-bold mb-6">{% trans "Our Services" %}</h1>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {% for svc in services %}
+      <a href="{% url svc.url %}"
+         class="group block bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow">
+        <!-- square icon area -->
+        <div class="aspect-square flex items-center justify-center bg-gray-50">
+          <img src="{% static 'img/'|add:svc.icon %}"
+               alt="{{ svc.title }}"
+               class="w-12 h-12 group-hover:scale-110 transition-transform">
+        </div>
+        <!-- title & desc -->
+        <div class="p-4">
+          <h2 class="text-lg font-semibold mb-1 group-hover:text-green-600">{{ svc.title }}</h2>
+          <p class="text-gray-600 text-sm">{{ svc.description }}</p>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% load static i18n %}
+<!DOCTYPE html>
+{% get_current_language as CURRENT_LANGUAGE %}
+<html lang="{{ CURRENT_LANGUAGE }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{% block title %}Embassy of Mozambique{% endblock %}</title>
+  <link href="https://unpkg.com/tailwindcss@^3/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+
+  <nav class="bg-white shadow px-6 py-4">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+      <!-- Logo and title -->
+      <div class="flex items-center mb-4 md:mb-0">
+        <img
+          src="{% static 'img/logo.png' %}"
+          alt="Coat of Arms"
+          class="h-14 w-auto mr-4"
+        >
+        <span class="text-xl font-bold">Embassy of Mozambique</span>
+      </div>
+      
+      <!-- Navigation links -->
+      <ul class="flex space-x-8">
+        <li><a href="{% url 'home' %}" class="hover:text-green-600">{% trans "About" %}</a></li>
+        <li><a href="{% url 'service_list' %}" class="hover:text-green-600">{% trans "Services" %}</a></li>
+        <li><a href="#" class="hover:text-green-600">{% trans "News" %}</a></li>
+        <li><a href="#" class="hover:text-green-600">{% trans "Contact" %}</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="p-6">{% block content %}{% endblock %}</main>
+  <!-- Chatbot widget stub -->
+  <script src="https://your.cdn/chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="bg-blue-600 text-white rounded-lg overflow-hidden mb-6">
+  <img src="/static/img/home1.png" alt="Mozambique Flag" class="w-full">
+  <div class="p-6">
+    <h1 class="text-4xl font-bold mb-2">Welcome to the Embassy of Mozambique</h1>
+    <p>Your source for consular services, visa forms, news, and assistance.</p>
+  </div>
+</div>
+<div class="grid grid-cols-3 gap-6">
+  <a href="{% url 'visa_service' %}" class="p-4 bg-white border rounded shadow hover:shadow-lg">
+    <h2 class="text-xl font-semibold mb-2">Visa Services</h2>
+    <p>Complete and download visa application PDF forms here.</p>
+  </a>
+  <a href="{% url 'passport_service' %}" class="p-4 bg-white border rounded shadow hover:shadow-lg">
+    <h2 class="text-xl font-semibold mb-2">Passport Service</h2>
+    <p>Apply online and track passport applications.</p>
+  </a>
+  <a href="{% url 'consular_assistance' %}" class="p-4 bg-white border rounded shadow hover:shadow-lg">
+    <h2 class="text-xl font-semibold mb-2">Consular Assistance</h2>
+    <p>Get help for emergencies, legal matters, and notarial services.</p>
+  </a>
+</div>
+{% endblock %}
