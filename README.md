@@ -2,7 +2,7 @@
 ```markdown
 # Embassy of Mozambique Website
 
-This Django project implements a multi-language, media-rich website for the Embassy of Mozambique with:
+This Django project implements a multi-language, media-rich website for the Embassy test:
 
 - **Home page** with hero banner & navigation
 - **Visa Service**, **Passport Service**, and **Consular Assistance** pages
@@ -19,7 +19,7 @@ This Django project implements a multi-language, media-rich website for the Emba
    ```
 2. **Clone & enter project**:
    ```bash
-   git clone git@github.com:your-user/moz-embassy.git
+   git clone git@github.com:your-user/web.git
    cd moz-embassy
    ```
 3. **Create & activate venv**:
@@ -36,5 +36,4 @@ This Django project implements a multi-language, media-rich website for the Emba
    python manage.py migrate
    python manage.py runserver
    ```
-6. **Open** `http://127.0.0.1:8000` in your browser.
-```
+
