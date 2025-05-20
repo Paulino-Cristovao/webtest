@@ -1,0 +1,14 @@
+# Ignore API key and data
+*.env
+*.json
+*.log
+*.sqlite3
+*.db
+*.csv
+*.xlsx
+*.png 
+*.jpg
+*.jpeg
+*.gif
+*.pdf
+*.zip
